@@ -7,7 +7,7 @@ A small javascript url router.
 ### BestRoute.on(route, callback [, checkNow])
 Adds a new route
 
-#### route
+#### route <a id="route"></a>
 route should be a string of any length with each thing seperated with a forward slash:
 ```
 /pages/home
@@ -30,6 +30,12 @@ If the route contains parameters then they are passed as an object like:
 checkNow is a boolean. If true then the route is checked as soon as it's created instead of when the location hash is changed.
 
 This can be useful if you want the user to be able to load a page with a route already in the url.
+
+## on
+### BestRoute.off(route)
+Removes a route
+
+#### [route](#route)
 
 # Usage
 
