@@ -7,10 +7,10 @@
     }
 
     //Functions go here
-    var on = function(location, cb, checkNow) {
+    var on = function(route, cb, checkNow) {
       function checkHash(){
         var currentHash = '';
-        var onHash = location.split('/').filter(function(n){ return n !== ''; });
+        var onHash = route.split('/').filter(function(n){ return n !== ''; });
         var params = {};
         if(window.location.hash) {
           currentHash = window.location.hash.substring(1).split('/').filter(function(n){ return n !== ''; });
@@ -37,8 +37,14 @@
         checkHash();
       }
 
-      this.checks[location] = checkHash;
+      this.checks[route] = checkHash;
     };
+
+    var off = function(route) {
+      if(this.checks[route]) {
+        delete this.checks[route];
+      }
+    }
 
 
     window.addEventListener("hashchange", function() {
@@ -49,6 +55,7 @@
 
     //prototypes go here
     BR.prototype.on = on;
+    BR.prototype.off = off;
 
 
     if(typeof(window.BestRoute) === 'undefined'){
