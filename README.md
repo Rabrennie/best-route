@@ -6,8 +6,8 @@ A small javascript url router.
 ## on
 ### BestRoute.on(route, callback [, checkNow])
 Adds a new route
-
-#### route <a id="route"></a>
+<a id="route"></a>
+#### route 
 route should be a string of any length with each thing seperated with a forward slash:
 ```
 /pages/home
