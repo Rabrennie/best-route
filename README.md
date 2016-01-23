@@ -31,7 +31,7 @@ checkNow is a boolean. If true then the route is checked as soon as it's created
 
 This can be useful if you want the user to be able to load a page with a route already in the url.
 
-## on
+## off
 ### BestRoute.off(route)
 Removes a route
 
